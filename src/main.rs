@@ -29,12 +29,14 @@ fn run(config: Config) -> Result<(), Box<dyn Error>> {
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    println!("{:?}", args);
 
-    let config: Config = Config::build(&args).unwrap_or_else(|err| {
-        println!("problem parsing arguments: {err}");
+    let config = Config::build(&args).unwrap_or_else(|err|{
+        println!("problem parsin arguments: {err}");
         process::exit(1);
     });
+
+    println!("Searching for {}", config.query);
+    println!("In file {}", config.file_path);
 
     if let Err(e) = run(config) {
         println!("application error: {e}");
