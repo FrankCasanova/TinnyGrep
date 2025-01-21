@@ -1,0 +1,3462 @@
+hello this is about the video
+to explain why i hate ras programming
+language okay
+so okay this video is all about the
+negativity of ross if if you
+think i i don't want to talk about
+anything positive because you can always
+watch all these
+nonsense echo chamber rust safe whatever
+nonsense video
+you go just go to the reddit or other
+videos they will tell you how good russ
+is okay
+they couldn't talk how good and how good
+and how good grass is
+and yeah rust is always good and
+no downside so
+
+now first thing i want to talk about is
+
+the binary bloat issues
+
+okay now before i talk about that i'm
+
+going to explain why binary site is
+
+extremely important right now the first
+
+problem is that a lot of spiritual
+
+environments they have the size
+
+restrictions right
+
+they have the binary size refrigerations
+
+like like the operating system kernel
+
+like the bootloaders that in battery
+
+system or even web assembly
+
+you have this restriction size
+
+restrictions and even github has these
+
+upload size limitations you cannot
+
+upload anything
+
+which is larger than like 100 megabytes
+
+that is very problematic
+
+at least it's very problematic for i
+
+want i try to upload clan
+
+and clean is too large compared to gcc
+
+and i cannot upload client to the github
+
+that's very problematic
+
+the second binary size directly affects
+
+the performance of the program
+
+because if you have a larger binary size
+
+it adds burden to the cpu cash locality
+
+and pager
+
+quality right you have larger binary
+
+size
+
+you're going to get more paid form
+
+you're going to get more
+
+instruction cash cash me that just
+
+directly affects the performance
+
+and third i think a lot of people don't
+
+don't know it is that
+
+a larger binary site will severely harm
+
+the security of your program
+
+because it provides more written
+
+oriented programming gadgets
+
+the attacker can just use those bloating
+
+parts to attack
+
+to attack your program right you provide
+
+these functionalities that
+
+they can reuse that part to attack your
+
+program
+
+right that's how this return already any
+
+programming attack
+
+is formed despite all these these
+
+god whatever it just doesn't work
+
+because rot is a very serious issue
+
+right it just directly
+
+leads two control flow integrity
+
+problems
+
+so let's just see how blue the rust
+
+program is
+
+so here i'm just writing a a
+
+a function just doing nothing just a
+
+function made right just
+
+add a function and you what do you do is
+
+there's nothing
+
+a simple program and here we have a c
+
+processing domain right let's
+
+compare two of them and we can see if
+
+you try to
+
+compile the code i'm optimal
+
+optimization look here that's all here
+
+and we can see the binary size is 10 10
+
+megabytes
+
+before streaming okay useless extremely
+
+another streaming block because it
+
+provides that
+
+a lot of lots of debugging information
+
+it doesn't make sense
+
+then just streaming okay let's stream in
+
+the binary and the binary is 200
+
+and 83 kilobytes that is
+
+huge right this is huge
+
+now you might say it's because ross has
+
+these uh static linking models i would
+
+explain that it's not the case
+
+so we have the c plus first program and
+
+we do the same thing we time it
+
+we statically gcc of celluc process
+
+because i just want to compile compare
+
+two of them to see
+
+whether the static linking is a problem
+
+we're just using a function and in the
+
+name
+
+as an example a c plus plus program is
+
+only 14 kilobytes on
+
+linux okay it's 15 kilobytes on windows
+
+and so it is 14 to 15 for example or
+
+even some in some platform you know
+
+two or three kilobytes or whatever
+
+but no matter what platform you're using
+
+you'll see that
+
+just writing a a main function only
+
+takes 14 kilobytes compared to 283
+
+kilobytes
+
+of rust which means just in the main the
+
+rust program
+
+blows 20 times than the c-class was
+
+okay so the rust program
+
+is very blown okay and if we try to see
+
+the compilation speed
+
+let's just doing that it takes 0.1
+
+second
+
+0.56 seconds
+
+was this ridiculous right it's
+
+completely ridiculous and
+
+uh probably we need to add them together
+
+or something but
+
+just 0.16 second of compiler
+
+functioning okay
+
+so even the compilation speed is
+
+extremely still terrible right
+
+the program doesn't do anything it's
+
+just functional but it takes 0.166
+
+seconds that's ridiculous
+
+so the binary size is extremely blurred
+
+and compilations time doesn't seem to be
+
+very good either
+
+and it will try to use the ldd to see
+
+what the share libraries
+
+it links to and you can see not only
+
+it's not fully
+
+uh static linking right it's still need
+
+to link with sleep gcc because
+
+of the unwind logic with it you might
+
+say i can just using
+
+cpanel equals about whatever
+
+i'll try that it's still linked to
+
+libgcc because
+
+the rust standard library still requires
+
+functionalities in cubies this is
+
+gccs for unwanted stuff
+
+and we'll see the c plus plus programs
+
+we can see
+
+it actually uh the difference here is
+
+that the password for program or
+
+coc plus program will link to lib m
+
+i don't know why they linked to libman
+
+but let's just ignore the path
+
+but they don't need to leave peace right
+
+they don't link to deep gcc right
+
+they don't need to leave their dpr
+
+either right
+
+so these three parts just don't make any
+
+sense
+
+i'm not using any thread why does it
+
+link to lip piecement
+
+why does it link to leave the error
+
+right
+
+so yeah it's just very problematic
+
+okay so you might say what about hollow
+
+hollow one
+
+okay just what about printing color
+
+water so
+
+i'm just doing the standing standardized
+
+things i'm just
+
+uh using i'm not disabled exceptions i'm
+
+just disabling something very much
+
+smaller but just print hollow one so
+
+with premium color water it's doing this
+
+same thing as ross is doing but it's
+
+only 14 kilobytes
+
+notice i'm not using shell libraries
+
+link tool some
+
+lip files i or whatever i don't use
+
+shared library at all and they see the
+
+binary size
+
+rust is still 20 times louder
+
+let's do nothing okay this is doing
+
+nothing but
+
+in fact i okay we have the 14 oh this is
+
+not 14 kilobytes i'm sorry it's 14 bytes
+
+this spice is
+
+uh okay it's it's 14 kilobytes so
+
+the rust program is 20 times larger than
+
+the c cross products program even with
+
+static link whatever basically so it's
+
+basically very very bad the bible
+
+probably feels really bad
+
+so no no you might say it doesn't make
+
+any sense
+
+right uh because i can deal with it okay
+
+let's just i will tell you the story is
+
+that zero cost abstraction
+
+is just a joke and mimi okay it fails in
+
+c plus plus it fails in other languages
+
+there's simply no zero chord
+
+subtractions
+
+uh i think i can show an example of a
+
+square here
+
+okay so here's the last program okay see
+
+what
+
+what it actually does so
+
+i'll just try to access slide slide zero
+
+one two three four five
+
+and you can see the compiler is
+
+extremely dumb
+
+it checks the the balance for every
+
+of the of of the subscription access
+
+right
+
+we access every use index it checks that
+
+check whether you have the what what
+
+what what whether it's
+
+whether you lost the button and you can
+
+see if we just continue like that
+
+it will add another more branch
+
+okay okay the compilation speed is also
+
+very terrible notice i'm i'm using o3
+
+okay i'm using all three so uh let's see
+
+what the program actually does
+
+so you can see here the actually
+
+generally string
+
+for every bounce checking
+
+so the rust focus is so it's not even
+
+efficient for checking this boundaries
+
+they are not just
+
+the minimum check what it actually does
+
+is the checkbox for
+
+yeah let's give you a an error message
+
+of
+
+which line you have the problem you can
+
+see that the string line is different
+
+okay so this is probably three i think
+
+is tell you
+
+you are you have an arrow in the string
+
+and it has three you have
+
+a four five six and whatever
+
+um
+
+and if we write the same code we see
+
+plus plus
+
+okay the last program generates
+
+five times more probably this kind of
+
+part i just
+
+ignore you know that part because this
+
+is only some constant
+
+if you just take it on the instruction
+
+part
+
+it's nearly time times right it's just
+
+ten times i think it's time times more
+
+instructions than c
+
+plus plus generates and you can see
+
+the button changing actually harms
+
+perform other optimizations
+
+when you have bounce check in the
+
+compiler cannot it has to push another
+
+register
+
+cannot do vectorization let's see here
+
+we do o32 and we can see the compiler
+
+cannot do a
+
+vectorization anymore with rust because
+
+you have this extra bound checking right
+
+there
+
+and you have these binary blowed here
+
+right you have the binary blower here
+
+it's going to be
+
+extremely extremely slow it's not as
+
+just small slow down it's very
+
+significant slow down even even the
+
+happy pass right this the code will
+
+execute
+
+par still generates nearly three times
+
+in more instructions than
+
+not much more instructions than c plus
+
+positive
+
+three times instructions
+
+now you will see a significant overhead
+
+with it
+
+and you can see here probably it has
+
+even fewer
+
+uh memory access because it's vectorized
+
+we have vectorized the stuff
+
+i think the further optimization which
+
+would approximately
+
+probably going to use my why register
+
+right it's going to look
+
+for the happy market optimization
+
+compared to what spawn checking is doing
+
+so ros program is extremely bloat
+
+and dividing the panning part is
+
+extremely bad
+
+you must say oh it's happening how i
+
+just use cpanel
+
+what's going to happen with that uh
+
+just nothing changes okay nothing
+
+changes here
+
+we don't see any changes it doesn't
+
+improve the quality of the program
+
+and imagine whether whether because we
+
+enable exception we actually did enable
+
+optimization we don't really just the
+
+value blue even worse
+
+right the code is extremely extremely
+
+slow
+
+um so the argument that rust is as fast
+
+as c plus plus this doesn't make any
+
+sense you have to use unsafe to get rid
+
+of the problems you have to
+
+use unsafe getting that check whatever
+
+just get rid of problems with it
+
+it's not like rust fog said or bounce
+
+checking doesn't mean it doesn't
+
+make you slow down it does make you cool
+
+slow down
+
+because there are no zero cost
+
+abstractions
+
+um
+
+i think uh
+
+there are the problems with ross in my
+
+opinion the personal opinion is i
+
+i think you wrapping the c apis is it's
+
+much harder than error-prone compared to
+
+c
+
+plus plus you might say we have code
+
+generator like code
+
+by buying a binding generator binder
+
+right with rust you can come
+
+you can translate it from c brother c c
+
+headers to rust
+
+but in fact there are no zero cos
+
+abstractions right
+
+you use these these code generators they
+
+going they're going to blow
+
+your compilation speed okay
+
+and then run we know already we are in
+
+the rust compilation speed
+
+is a horrible horrible mess right it's
+
+just so small
+
+right c plus is already very slow and it
+
+has the bigger problem is it has to
+
+repress the header fires but rust makes
+
+it
+
+they slow down and we just make it
+
+even more slower it is significant
+
+slower
+
+and which is ridiculous the version is
+
+used right
+
+why using this code generator part how
+
+do you ensure you don't have a version
+
+any issues with it
+
+all right probably you can just pause
+
+the entire
+
+uh fire with ross but it still doesn't
+
+make any sense right
+
+it just makes you it's just making
+
+things extremely hard and problematic
+
+and you cannot see what the import is
+
+and
+
+and in general is it makes you lack of
+
+control right you have no control of all
+
+these code generators doing
+
+this these kind of things behind these
+
+things
+
+height you just that tries to hide
+
+things behind a very problematic if you
+
+want to do various
+
+things you want to know what is going on
+
+these problems these stuff are very
+
+problematic to be honest
+
+okay so
+
+um so there's a philosophical design
+
+philosophical philosophical divided ways
+
+they are safe keyword errors
+
+so a lot a lot of ross you know also
+
+would say
+
+only should never ever be used right
+
+because our language is designed for
+
+safety if you're just using unsafe
+
+everywhere what's the point of using the
+
+language you know okay
+
+so they they already defeat their own
+
+their own language purpose
+
+what's the point of using rus there's no
+
+point of using ross in my opinion
+
+so all you are saying okay
+
+unsafe should only be using exceptional
+
+circumstances
+
+so why don't you sound safe right you
+
+know it's very like the old life you see
+
+plus plus
+
+claim that exceptions should only be
+
+using exceptional segment settings right
+
+that leads to pain right particular yc
+
+processor is very bad for writing
+
+operating system kernel it's because of
+
+these bad assumptions
+
+right across already suffers from the
+
+exceptions
+
+which should be only used in exceptional
+
+settlement senses
+
+i think russia suffers from the unsafe
+
+to only be using
+
+exceptional segments and senses too
+
+nobody knows when to use something right
+
+when you do something
+
+you cannot give me a standard say want
+
+to use unsafe is
+
+appropriate when it's not you might say
+
+i'm using
+
+only ffi api should only use sound but
+
+people don't do that people say hey i'm
+
+using unsafe i can get
+
+get much better performance i can i can
+
+defeat borrow checkers
+
+right i can defeat all these non-sensing
+
+rust and how do you
+
+give me an a standard saying what do
+
+yourself say
+
+okay the problem is it's making us these
+
+questions are big
+
+big questions there's no answer for
+
+these questions right
+
+right there's no questions there's just
+
+no ways you have to ask these questions
+
+and
+
+okay what fun are you gonna do
+
+you're gonna do it what are you gonna do
+
+is using 100
+
+of our save to avoid dramas right you
+
+cannot use saving any part of your code
+
+because
+
+you'll never be able to know whether
+
+this safe code will will be
+
+will either lead these to binary bloat
+
+or leads to other city performance
+
+issues
+
+or lead to other issues particularly
+
+michael michael
+
+this is talking with operating system
+
+apis or just do meta point manipulations
+
+in that code in that kind of code i have
+
+to basically using one hundred percent
+
+of monsignor
+
+right and using one hundred percent i'll
+
+save just can avoid these trolls in
+
+grassroots saying you should never do
+
+something
+
+you should you can just use one hundred
+
+percent more save to
+
+make them shut up right because they all
+
+they are going to come here and pick a
+
+grammar place to destroy your
+
+project like as uh as this web is doing
+
+right
+
+so the rocks the rusty laws will say
+
+let's just rewrite everything rust so
+
+these questions
+
+i think is it's impossible right like
+
+leave c like politics
+
+can you rewrite politics right you see
+
+no you cannot
+
+because posix is the opening system
+
+standard you know
+
+i think this a lot of people don't
+
+understand posix is the operating system
+
+standard just like wd-40
+
+uh just iso c is a c standard the
+
+plus plus is c plus plus that language
+
+center posix
+
+is the operating system standard it
+
+provides the basic
+
+interface for talking to operating
+
+system
+
+right to make sure you ensure your
+
+program is portable you might say
+
+windows does not follow politics
+
+well that's not technically correct
+
+windows does follow partial opposite
+
+okay if you
+
+read or if you watch other my
+
+talk about it i will tell you that yes
+
+windows photo partial products so
+
+positive projects is
+
+the operating system standard and you
+
+must provide a lipstick to
+
+boost driver compiler torture right the
+
+compiler
+
+including lvm or gcc they must you must
+
+provide a leap c to it
+
+and gcc needs the legacy to compile leap
+
+gcc and deep soucy plus plus then we get
+
+a
+
+full torch and with it a4 cross torch
+
+with it we can then
+
+build canadian cross torch and we have a
+
+new of new compiler
+
+new hosting compiler if you don't
+
+provide politics what you can do with it
+
+it's impossible right you must say i'm
+
+just designing apis for us
+
+but we also have other many other
+
+languages like python
+
+like like this java whatever
+
+these languages don't understand your
+
+roster abstractions they're just like
+
+you don't understand c plus plus
+
+abstraction
+
+i think they probably understand mostly
+
+plus structures and ros abstractions
+
+like java can understand c process
+
+exceptions for example
+
+just d plus exceptions the elves
+
+understand how
+
+exceptions is thrown and how the api is
+
+performed
+
+and nc crossroads api is relatively more
+
+stable than rust right
+
+but even those people don't use c plus
+
+plus to write anything because
+
+it's just you still worry about whether
+
+when the api will break
+
+if you're using rust how good how do you
+
+go how are you going to solve these
+
+problems
+
+i finally can just go into providence
+
+apis and defeat the progress right
+
+which means you're basically rewriting
+
+something which is nonsense then you
+
+rewrite it
+
+it just makes no sense you cannot
+
+replace politics you cannot replace
+
+these old bad standards
+
+how do you get it with it or how how can
+
+you do it
+
+so let's just using kickstarter let's
+
+just let's assume we use
+
+ross to rewrite open ssl okay
+
+the cryptography libraries using quite
+
+an
+
+intrinsic usage they have to use ad
+
+carry instructions for example
+
+or are rotated with carry instructions
+
+like open ssl we can see open ssl we can
+
+see open ssl
+
+i think i can show openness ssl
+
+uh i think i did put here
+
+okay just too much i'm sorry i'm i
+
+messed his
+
+are um
+
+let's just use sharp for example i'll
+
+just use this
+
+sharp shot it's very similar stuff but
+
+we can see
+
+the open ssl actually provides a lot of
+
+assembly implementation with it right
+
+how i fail to see how using rust would
+
+fix those problems
+
+right they are reading assembly how are
+
+you going to fix
+
+these problems right you probably say
+
+okay i can rewrite it with uh intrinsics
+
+okay you probably can't rewrite it with
+
+intrinsics but
+
+it doesn't make any sense because
+
+here's we already killed generators if
+
+you're using intrinsic you still need
+
+unsafe it's not like it rusted
+
+we can just save everything right i
+
+think open ssl
+
+is exactly an example you cannot use the
+
+safe language to write it because
+
+what they actually did is just writing
+
+the sample line right they just write
+
+the assembling how you can
+
+how are you going to deal with it right
+
+so basically these have your assembly so
+
+the roster does not work
+
+okay you might say i want
+
+fast i don't care about performance i
+
+want slower code
+
+express focus logic but
+
+there are other very good reasons why
+
+they are writing this assembly
+
+is to calling these cpu instructions
+
+like shaft 2
+
+215 6 to provide side channels
+
+right that can reduce the memory access
+
+using these special instructions these
+
+special instructions
+
+provide protections to prevent these
+
+side channels issues
+
+so it's basically impossible you derive
+
+you say we write rewrite rust we can
+
+solve those problems
+
+there are problems can be solved with us
+
+with rust to realize open ssl
+
+like like the openness is a bios problem
+
+right the opposite
+
+is not an io library but
+
+i mean it's still doubtful i'm doubtful
+
+about that because
+
+rust for us themselves the the
+
+io performance the i o stuff of rus
+
+is horrible it's even more i would argue
+
+horrible than c plus
+
+i will stream
+
+how do you trust ross to do better job
+
+than
+
+than open answers ssl is doing here they
+
+have already have
+
+buzzing they already have all this this
+
+stuff probably they can improve a lot of
+
+things by
+
+rewriting the c plus plus but and
+
+then what's the benefit of using rust
+
+right this is no benefit at all for me
+
+compared to other solutions you rewrite
+
+everything
+
+right how do you know how to draw these
+
+last new rascals won't introduce more
+
+cbe
+
+you don't know right and
+
+and i know and i and there are
+
+also other problems with it people are
+
+using
+
+unsafe to fight against the border
+
+checker right
+
+because they cannot write linked lists
+
+you cannot write anything because the
+
+border checker is fighting them you know
+
+what we can do is i'm using our sake to
+
+fight against it right
+
+so it's
+
+and there's just a typical experience
+
+with with me i think
+
+there's a rust program he was a
+
+raspberry okay
+
+he tried to use rust but he finds that
+
+what he can actually do is using our
+
+tongues i want to save to fight against
+
+borrow checker
+
+using unwrapped a lot of fun a lot of
+
+functions and say
+
+what's the point of building it i'm
+
+going to go back to c plus plus that's
+
+also
+
+i i feel it just makes no sense right
+
+the language is poorly designed
+
+basically
+
+and i don't think there are any other
+
+languages you try to just
+
+fight against the same team mechanically
+
+it just makes no sense right just make
+
+fighting against a moral checker
+
+right ross said we don't have garbage
+
+collection okay
+
+that's probably a good site but but the
+
+downside is that
+
+you don't have garbage collections and
+
+you haven't introduced these boral
+
+checkered stuff and
+
+people are gonna fight you is it and how
+
+do you can deal with it and people just
+
+use it on safe to find it
+
+so those are very formatting and about
+
+the underrated
+
+abuse i think the api is good even the
+
+rust and library api is designed very
+
+poorly like the ffi api it's very
+
+important api
+
+okay here what i'm doing is just using
+
+an
+
+f opener for f closed i want to see
+
+what's happening here okay
+
+so just right on f open left
+
+and it just makes me wonder you know
+
+just
+
+make me curious why do you need a robot
+
+c
+
+string right how could c string fail you
+
+know just
+
+i failed to understand you know even
+
+plus plus
+
+you can just f open rust.txt wp right
+
+they already provide new terminator with
+
+it but i think
+
+probably velocity is that the different
+
+string layers don't have
+
+the a new terminator
+
+and you have to use the c string to get
+
+around it
+
+so it's slower right this is already
+
+slower because you have to allocate
+
+string you have to deal with
+
+allocation you have and this unwrap okay
+
+notice there are
+
+unwrapped here what's the point on wrap
+
+using unrev if it just it just makes any
+
+sense
+
+it doesn't make any sense right how
+
+could first how could the api fails
+
+how could the new api fails and
+
+certainly why do i need unravel
+
+okay it's just ridiculous i mean this
+
+api is ridiculous and even so it's the
+
+api's
+
+incorrect because you can see we cannot
+
+see what
+
+exploiting we should write a opaque
+
+fire right or pick fire instead of using
+
+oil or you don't want to you don't know
+
+whether you have the areas and issues
+
+with other problems with it
+
+because it's now the same time
+
+so whatever maybe these apis
+
+importantly correctly but i'm just want
+
+to try it
+
+but in general it's a serious problem i
+
+mean ross is basically unraveling
+
+everything because
+
+you have to deal with it you have no
+
+other solutions you cannot say i'm just
+
+using
+
+a question mark to propagate errors
+
+error code you cannot do that either
+
+because you have a different error code
+
+how did you get to deal with it so i
+
+think the ros error handling mechanism
+
+is it just it's too bad and just it's
+
+it's better it might be better than c
+
+plus the exceptions because c products
+
+everyone is horrible
+
+but i failed to see how this expected
+
+and why the stuff is better you know
+
+just still crap this is still crap
+
+okay i think the hub session is actually
+
+very good because you don't have these
+
+different types of error code quality
+
+propagation problem
+
+they always propagate through registers
+
+you don't have to deal with the dynamic
+
+typings
+
+you don't really keep allocations yeah
+
+you still need to deal
+
+with these things finally what you're
+
+going to do is unwrap all your apis
+
+to avoid dramas and this is very
+
+problematic when you're
+
+calling on rap you're calling a rap you
+
+panic
+
+you have a panic and rust
+
+panic is very very bad like you get
+
+you have these cves with with padding
+
+i'm going to talk about that in a little
+
+video but
+
+basically it's very very terrible so in
+
+russ you have to
+
+abuse the wrong function from rap all
+
+right you
+
+have no idea what's going on here it's
+
+just it's just
+
+promoting you i think it's very like the
+
+java check exceptions
+
+people what people can finally do they
+
+just throws every exception they don't
+
+care how do i just
+
+i'll just ignore all the errors
+
+basically that's what they are doing
+
+they don't care about how the arrogance
+
+is it's just
+
+how they how you couldn't deal with the
+
+errors as my as
+
+my code was i don't care about
+
+everything i just unwrap everything
+
+so which is very important okay
+
+other compilations ah
+
+i guess this is something everyone would
+
+agree with
+
+i i've just read some articles saying
+
+that the languages
+
+are accidentally mis-designed in a way
+
+they cannot be recompiled you know just
+
+you have to recompile entire code just
+
+to deal with that
+
+i mean also it meets a bunch of irs and
+
+for the lvm
+
+optimizer the lvm i cannot deal with it
+
+either
+
+like like like the example i'm showing
+
+here right
+
+it's it's tough for rvm to to deal with
+
+those
+
+those problems like
+
+the front end it means a bunch of ir and
+
+the language is based line
+
+and you might see how slow is it
+
+right just in the reciting main example
+
+i think
+
+db language they actually provide a very
+
+good benchmark
+
+they show the benchmark okay so
+
+you see the benchmark so the ros first
+
+is stopped after 30 minutes just no
+
+no optimization we have no optimization
+
+it just writes plus c
+
+okay we don't optimize code and
+
+the last program is it compiles
+
+extremely extremely slow
+
+because the v language said oh this is
+
+compiled so slow and
+
+i'm just try testing small lines in code
+
+just two k lines of code you compile 3.4
+
+two k lines on total
+
+uh 20 kilobytes of code that's three
+
+minutes to support 50 seconds too
+
+you know i actually tried that benchmark
+
+i tried 10k benchmark you know what's
+
+happening
+
+even with 464 gigabytes of memory
+
+okay the ros compiler is all my memory
+
+and
+
+get killed by will be compiled by the
+
+operating system because
+
+the memory consumption of gross compiler
+
+is too large
+
+because it's too large it's basically
+
+impossible to compile a large product
+
+here even when you see all this product
+
+it's impossible to compile with it
+
+it's to a point you cannot compile code
+
+and you see
+
+with just being impossible to compile
+
+the basic conclusion is that ross is the
+
+slowest
+
+language in compilation speed
+
+for all compared to all other languages
+
+there's no other language it's so it's
+
+just as bad as wrong
+
+russ is a worse programming language for
+
+compilation speed
+
+okay and you know even the
+
+things either compared to c plus plus
+
+rus
+
+has its own they don't have header files
+
+to purchase right
+
+c process does not have modules and the
+
+fantasy process trying to fix it with
+
+some modules
+
+i don't know whether it's work out but
+
+russ is already moduled right they're
+
+already using module system
+
+but the language is designed away just
+
+so slow
+
+then even with modules it still compiles
+
+extremely slow
+
+that tells you something that the
+
+language is poorly designed in many
+
+forms
+
+and probably that's the case
+
+i think russian generally just don't
+
+care about technology what they care
+
+about
+
+politics like we can talk about later
+
+so platform summaries is also somewhat
+
+problems
+
+like those right i'm writing dollars
+
+programs okay i'm not actually writing
+
+dollar swing but i'm using gcc torches
+
+it doesn't support gcc right it doesn't
+
+support gcc from backhand
+
+and you have these platforms i thought
+
+those is just an example
+
+what if you're using these platforms
+
+which requires gtc
+
+you're going to deeply screw it right
+
+well i think they are trying what they
+
+are trying to do is
+
+writing some uh writing of rus from end
+
+but we haven't seen what's going on here
+
+we're
+
+going to see what's going on why do you
+
+think just if we end up very badly
+
+what about red x os
+
+okay uh
+
+i'm sorry i need to just
+
+okay so uh this
+
+uh uh an operating system here right
+
+here rust
+
+let's see what's what the code is doing
+
+uh let's see we just use this example
+
+uh look at
+
+the code right it just basically
+
+unsafe all the functions right unsafe
+
+unsafe and safe
+
+what what does raspberry told us right
+
+what what do these broth
+
+they're all told us you don't use unsafe
+
+right you don't need unsafe
+
+but this project tells you that
+
+just unsafe everywhere just unsafe
+
+entire code
+
+this code is probably better we can just
+
+try other code
+
+but this is probably another just a code
+
+a bunch of our same right just not not
+
+just single ones just a lot not like you
+
+like people said oh i'm just using
+
+obviously
+
+this is ridiculous right i'm saying this
+
+is ridiculous okay
+
+what are you just not marking or saving
+
+entire block
+
+why are you just using i'll say for each
+
+block here
+
+all right it's just poor quality
+
+workload it's very bad the code
+
+they told us we don't need our unsafe
+
+including our code in ross code
+
+that's this is real world ross code okay
+
+this is real one basketball
+
+so the reddit os i don't even really
+
+have cvs right there you know
+
+the language is actually plagued with
+
+memory safety cves right
+
+so um you know the rust people told us
+
+that
+
+our language is perfect we don't have
+
+memory safety cpu
+
+uh and here's the here's the cv you have
+
+okay number three okay
+
+these are all memory safety issues okay
+
+these are all memory city issues right
+
+people
+
+rush rustful people tell us russ kills
+
+all these memory safety issues
+
+what we left is only other problems
+
+like overflow like other stuff
+
+but here you have number three you have
+
+a number three okay double three and
+
+double three with
+
+panning and job right depending on your
+
+job in per
+
+you have this double free with it
+
+right you have double free you have
+
+audio bounce right
+
+and these are incred okay we don't know
+
+how many
+
+real world cvs actually exist besides
+
+crap
+
+right this is just just only partial of
+
+and you can see the cv numbers is
+
+actually looks like growing
+
+exponentially with years you know i
+
+think
+
+you can see just i think now we have
+
+more cvs in 2021 the entire 2020.
+
+even in 2020 we can see it's a bunch of
+
+issues
+
+with the double use of three or double
+
+threatening and
+
+and you can see this i i find this is
+
+something very interesting with this
+
+series okay
+
+is that uh
+
+they have double drops with with with a
+
+pacman drop
+
+i don't actually understand what's going
+
+on here but i think what's going on here
+
+is that the rust will continue panic
+
+in job method if drop is sparked
+
+so if continue causing trigger panic
+
+that's very problematic right
+
+your program is already bugged and you
+
+continue to execute pro programs in job
+
+right you probably should just crash if
+
+you if you have a problem with with job
+
+why do you come in a panic your program
+
+is already in the cross state
+
+right it shouldn't continue it just
+
+should just crash and go
+
+and
+
+the panic the double free will trigger
+
+after this crash after you're causing
+
+these problems
+
+um the panic safety issues
+
+okay that they told us that during rust
+
+you don't have this exception
+
+you don't have exceptional safety issues
+
+but you have these panic safety issues
+
+with double favorite
+
+so so the point of ross is safety right
+
+it's a memory safety maybe it's for
+
+example for the grass
+
+i think for us officials that's the
+
+point
+
+okay and it's very bad if you regret
+
+you as a normal lost user you gotta
+
+fight with this
+
+with these problems right you're gonna
+
+fight with this double
+
+this is the fight against the community
+
+the community very
+
+toxic and they told us you don't have
+
+these
+
+these memory safety issues and here you
+
+have
+
+okay and i think he has actually pro
+
+and a research paper an acm
+
+paper talking about the memory
+
+let us understand the memory safety
+
+issues
+
+in real world rash programs
+
+and remember the red x os we just
+
+mentioned here
+
+i think they actually talk about red red
+
+excellence
+
+okay i invited free rust okay
+
+here's a ross code okay
+
+unsafe down save we have the invalid
+
+free
+
+and this openness of the bio i think
+
+this is wrapping the open accessory pio
+
+because wrapping api series is much
+
+harder than wrapping
+
+c plus c plus plus and they have these
+
+problems i think this this
+
+this kind of issues are very likely more
+
+likely to happen in
+
+real life compared with c plus ones
+
+right
+
+and these people actually don't know
+
+that even safe to save program
+
+safe to say coaching can't have memory
+
+safety issues because the compiler can
+
+have bugs
+
+so basically it told us i think
+
+the long the paper is still biased
+
+because
+
+the rust people were just focusing on
+
+the safe part basically maybe just
+
+treating our state park
+
+as some kind of stuff but in fact
+
+all kinds of categories you have
+
+problems it's just we
+
+care about safe to unsafe to unsafe part
+
+too much and we don't care about other
+
+problems
+
+and obviously the largest part is not
+
+actually from the unsaved itself
+
+it's from the safe to unsafe part which
+
+is basically the majority pace of your
+
+last program right
+
+you're finally gonna call unsafe in
+
+finding out some apis
+
+but they hide behind it they're hiding
+
+behind
+
+these same apis and you have no idea
+
+what's the api is going on
+
+that's what i'm saying i think even 100
+
+i'll say if you'll be better than
+
+you stop because it told us i told you
+
+that the api might be
+
+doing something wrong so
+
+the the people just told us it doesn't
+
+work this solution just doesn't work
+
+and you have the memory safety issues
+
+right they just
+
+play with cv the language just playing
+
+with cvus but
+
+the people say it's very safe 100 safe
+
+while nobody's talking about these
+
+memory safety issues with it
+
+so i think this is very problematic
+
+in fact okay i see tracy
+
+so of course the final we can talk is
+
+community the rust
+
+community is a very bad community okay
+
+now if people say
+
+people people uh
+
+behave the language doesn't control what
+
+people come here i would argue the
+
+opposite
+
+the language controls how people think
+
+right
+
+how you do something it actually affects
+
+you for example if you are
+
+if you do something everything in our
+
+life will affect us example
+
+even using a language right using a
+
+language deeply affects
+
+how we think about a thing right
+
+when you're using a new you need another
+
+word you're naturally fitting into that
+
+the idea mind of that environment
+
+that's how human as an animal
+
+adopt our environment adapt our
+
+environments right i don't know
+
+about it uh just to claiming
+
+that the the toxic community i think
+
+russell's has its worst community of all
+
+the community
+
+programming language i've ever seen the
+
+community is
+
+it's very toxic because the language is
+
+designed in a way that
+
+makes people becomes very toxic right
+
+i think it's just very like the world of
+
+warcraft situation where people will say
+
+we don't socialize because we don't want
+
+to socialize but yeah there are other
+
+people
+
+grouping people would argue the
+
+environment
+
+of the game would affect how you think
+
+right
+
+how would people would socialize with
+
+each other and we use
+
+the environment socializing with
+
+magically combat
+
+if we bring that environment back
+
+is that i think that's stable is correct
+
+i think more people will grow it as
+
+a statement instead of saying the
+
+language does not affect optimal
+
+thinking
+
+okay so even the language designers have
+
+a very problematic
+
+idea okay their mind is i i
+
+they're very problematic you know rust
+
+people believe that
+
+that is this rust language is already
+
+this is their own world okay ross
+
+believes
+
+tech will really is and always will be
+
+positive political political right
+
+that tells you that ross doesn't care
+
+about
+
+how to improve technology what they care
+
+about is political political struggle
+
+now you know what the chairman mao said
+
+what is politics right now he said
+
+okay she said is that politics is to
+
+um it's basically to destroy your enemy
+
+right it's just making the enemy
+
+you destroy your enemy that's party well
+
+basically
+
+was i think this is what ross is doing
+
+right now it's just trying to destroy
+
+any other languages not just for c
+
+process for cic plus but see all their
+
+memory unsafe
+
+we know they are memorial safe but
+
+they're also indeed trying to destroy
+
+other communities
+
+like gold communities right they think
+
+goldie you have a garbage collection go
+
+is a garbage language
+
+they sing all these other languages like
+
+python
+
+or python is too slow with this script
+
+language we should all read we
+
+should always write these python
+
+programs in rust
+
+okay because they are too slow
+
+you mustn't oh no one claims that but we
+
+actually see a video displaying that
+
+okay i will tell you there's a video
+
+talking about that
+
+so um before talking about that i want
+
+to talk about the drama here these are
+
+real world dramas because
+
+they just told you that the toxicity of
+
+ross itself
+
+not only tries to destroy other people
+
+it also destroyed to try to destroy
+
+itself
+
+right the these i don't know how to
+
+pronounce this
+
+probably actus web active spam probably
+
+not ever
+
+uh it's basically all about i'm safe
+
+rust right
+
+there's a guy this guy also this guy is
+
+using unsafe he wants to chasing the
+
+performance of his
+
+library his friend probably the
+
+framework
+
+protecting there's nothing wrong with it
+
+but people say it's fun that
+
+they do have a song usage whatever just
+
+these people these are these these seed
+
+savory
+
+they're losing rust it just they
+
+tries to destroy themselves you know
+
+you know you should respect any open
+
+source project
+
+right the all sorts of new business
+
+projects
+
+they put their time put their effort on
+
+something which is
+
+right should benefit the community but
+
+what you're trying to do is
+
+you try to destroy it right what you are
+
+going to do is try because they are
+
+using unsafe to chasing performance
+
+this right the reason behind this
+
+is like i said you don't know right the
+
+talks the
+
+uh like what i said
+
+uh it's
+
+too vague right nobody knows how much
+
+unsafe should be used
+
+they are vague questions right you see
+
+plus plus people are using you
+
+because you have this exception or
+
+should only be using exceptional segment
+
+settings
+
+finally people all people better make
+
+balance exceptions
+
+right over fifty percent of c plus plus
+
+projects according to
+
+uh hubstarters
+
+survey iso cp survey balance exceptions
+
+here's some situation in euros that
+
+you have no standard to say want to use
+
+on say one to no
+
+then the people would do it using i'll
+
+say you cannot say they're using
+
+these unsafe usage are incorrect i think
+
+they actually do use it
+
+incorrectly correctly right they
+
+actually use that correctly
+
+they actually wipe they do know what
+
+they're doing
+
+but the ross community say oh you are
+
+bad or whatever
+
+and uh
+
+and you can if you just try to start to
+
+read it
+
+and they're saying that this completely
+
+disgusting this is
+
+is disgusting okay uh why do you write
+
+i'll say whatever
+
+just disgusting for me the community is
+
+very bad
+
+this community is toxic it's just very
+
+bad
+
+right i think this guy is actually
+
+writing boosting but i cannot upload him
+
+because he didn't consider unsafe as
+
+evil but the whole thing cannot live
+
+without unsafe right
+
+this is typical brass community the rust
+
+community just promotes psychology
+
+behavior
+
+the language is very toxic and it's very
+
+problematic
+
+uh and
+
+okay you can't watch this video if you
+
+think right why russ thinks
+
+text is always and will be politics it's
+
+very very very
+
+very bad so this is another video that
+
+talks about
+
+uh access web and
+
+this guy was a rust user
+
+and he makes some very good points here
+
+i think
+
+um he's saying these benchmarks are
+
+cheating right i'm not talking about
+
+these bad tracker training
+
+and the simple fact is that
+
+some of them even post their blogs and
+
+gui applications on crates or io
+
+it's just it's a hot mess right he's
+
+actually
+
+arguing the whole the very good point i
+
+think people should
+
+go here and watch uh watch this video
+
+what i think is
+
+clearly just down for a web exit five
+
+you can just find out
+
+i think it's very hard to find so they
+
+just point it out
+
+uh this guy is actually writing very
+
+very good stuff he's saying that
+
+uh it's a hot mess the language is a hot
+
+mess
+
+you cannot this the std is very lagging
+
+and you have to do this these are real
+
+world
+
+real real rust programs before right now
+
+it's
+
+with the finances the language is a joke
+
+the language is
+
+it's very bad just very very bad it's
+
+just you know he's officially done with
+
+ross i think
+
+that happens with a lot of
+
+prerog programmers they they go back to
+
+see prospero because
+
+the community is very toxic right the
+
+new camera sound safe to chase your
+
+performance
+
+right you cannot even you just unsafe
+
+they will just mock you on this
+
+on this on this reddit and all this
+
+stuff
+
+right i think what we can do if you're a
+
+ross program you can just like i said
+
+using unsaving all
+
+the entire part of your code just to
+
+these people okay just to them
+
+okay
+
+yeah to just make them suffer i think
+
+this is a good
+
+good stuff and
+
+and this is not the totally
+
+it blows my mind you know ross folks
+
+claiming using clc plus plus by these
+
+human rights you know
+
+okay so here's a guy he's saying that
+
+you okay this guy who write
+
+modern c plus plus does not save us
+
+modern c plus responsive
+
+okay why do we need why do we need to
+
+save
+
+it's the logic is very problematic right
+
+he's arguing that the bad usage of c
+
+plus for us
+
+will lead to memory still these bonus c
+
+plus still leads to memory save the
+
+issues that's fine
+
+that's great but something i don't agree
+
+is that the spantastic
+
+effort i think f method is a mistake but
+
+what does he write here
+
+okay i think he is in here
+
+he said this is basically saying that c
+
+plus plus why it is human rights right
+
+it's bad for society
+
+bad for your reputation but if you're a
+
+customer using c plus c plus plus is bad
+
+for society
+
+then you are arguing linux kernel
+
+these compilers they are bad for society
+
+they might buy for their reputation but
+
+they are bad for society
+
+as a whole i think even the worst c
+
+programmers its program
+
+is probably going to be more safe than
+
+the human right
+
+human makes much more mistakes than our
+
+c program is doing
+
+the reason we are using this programming
+
+language is that
+
+programming language is more likely to
+
+be correct and efficient than the human
+
+if these cases is opposite we want you
+
+there right
+
+but he's saying that using clc process
+
+it's violence human rights it is
+
+basically ridiculous
+
+right and based on physiologically
+
+you know this these are real cvs right
+
+these are global memory safety cv
+
+so based on case logic is ros also a
+
+violator of human rights
+
+right so king ross is definitely also a
+
+human rights abuser based on
+
+their logic right so no using language
+
+does not make you violently human rights
+
+right
+
+that's ridiculous this can be ridiculous
+
+so um whatever i keep on saying oh
+
+russian linux kernel okay
+
+i think first these big companies like
+
+google purchases
+
+despite the rust google has available
+
+despising the entire culture as a
+
+group linux culture android for example
+
+they realize they're all on libsy
+
+and linux no longer writes a lot of code
+
+i think
+
+there's a report saying he's not writing
+
+a lot of code
+
+and um
+
+but he actually provides criticism it he
+
+said
+
+again excuse my lack of internal rust
+
+knowledge
+
+which means he's not using glass just
+
+some people wants to use rust
+
+but it is large companies they want new
+
+thrust
+
+that does not mean the the programmers
+
+instead of themselves ron rust
+
+i think the what happens right now is
+
+that the linux is not
+
+running writing code
+
+he's uh retired he retires you know he
+
+basically retires and i can crack for
+
+writing code for example
+
+and he said he's no longer a programmer
+
+he's no longer programmer and he just
+
+don't care about his
+
+own project anymore he used to have but
+
+he probably lags i think this is
+
+probably the fundamental reason why he
+
+allows ross to uh to be allowed in the
+
+refund
+
+in the in the kernel is because he
+
+himself is lacking of internal wrestling
+
+knowledge
+
+he will understand it's a horrible mess
+
+when he tries to do that probably we're
+
+going to see that in the future
+
+probably not going to adapt to us either
+
+but we we're going to see
+
+and i think i think the reason basically
+
+and he even so he still
+
+points out the problems is for us he
+
+basically just you know he only tries to
+
+be more polite
+
+but we know this is fundamentally broken
+
+the wrong thing is fundamentally broken
+
+the rusk the right is fundamentally
+
+broke except once that's not acceptable
+
+because i think ross planning is very
+
+pragmatic stuff
+
+i would argue like things like all the
+
+memory should crash but
+
+i think the ross panic is a very bad
+
+mechanism due to the up double free
+
+issues and i don't know how the denix
+
+corner is going to deal with panning
+
+probably just going to crash you don't
+
+even have any stack of wine here
+
+you're probably not linked to deep gcc
+
+because they're using different torches
+
+so it's very problematic and
+
+these large companies they're just
+
+trying to push
+
+it and i i think this company just they
+
+don't care about technology itself they
+
+don't want to be currently advanced
+
+money
+
+right they only care about how do money
+
+money probably using ross will give them
+
+money i don't know
+
+because i don't have their internal data
+
+or probably it's because of the last
+
+the security team in inside these big
+
+companies they want our money
+
+they just try to propose something to
+
+prove their own useless
+
+so they can earn their wage right all
+
+their team will expand if they don't
+
+propose something interesting but we
+
+what we i think what are we going to see
+
+is that
+
+now we will have more raw style of cvus
+
+now we have seo our c processor has
+
+already reduced the boundary of cvs
+
+compared to c
+
+and we are going to see most cvs euros
+
+because of their little recruiting on
+
+rails for example
+
+we're going to see and wasn't
+
+okay
+
+so wasn't
+
+okay whatever so ross people told us
+
+that
+
+ross is very good for writing ryzen
+
+right
+
+i think it's very problematic of broads
+
+when you're writing these wealth
+
+assembly
+
+dude because first you have the binary
+
+broad issue
+
+right using rust to write programming
+
+you see extremely blunt
+
+you can this very strict environment you
+
+cannot just
+
+be uh pushing you know bloating
+
+executable right
+
+through weather right you you
+
+because different users might have
+
+different network connections
+
+they might not don't have stable
+
+connection if your binary size is large
+
+enough
+
+it's probably going not working right
+
+your website is probably not going to
+
+work by many machines
+
+many memory restrictions of network
+
+restricting machine
+
+you have to control the binary road but
+
+the rust blows very badly
+
+and this this while when sometime is
+
+boxed it's deeply bogged
+
+and for example right this is cause it's
+
+very bad i
+
+i actually you know what i actually do
+
+is fix around the brink deaths of
+
+the rust with resin just to fix around
+
+the horrible western time
+
+because it's horrible they're just very
+
+very bad like i have to
+
+write in that code just to deal with web
+
+assembly why some
+
+bug time or they're saying that we
+
+cannot implement the windows but how
+
+does the fast io my library did
+
+i can you can inform my ladder you can
+
+use that with logs
+
+with fire logs for example but in
+
+general the
+
+folks in general this is lack of basic
+
+knowledge of politics
+
+about these basic apis and it's just
+
+making this horrible horrible mess here
+
+you see i even picked an api called wesm
+
+barcode right normal okay just deal with
+
+the rust
+
+nonsense beneath it it's just very
+
+problematic
+
+and um
+
+finally i want to provide proof here
+
+oh okay this this is another video
+
+why would a python program learn last
+
+one there's no job well no there are no
+
+jobs
+
+ah yeah
+
+tyson is probably going to is now the
+
+second
+
+most most popular language in the world
+
+probably going to be the number one
+
+top one in near future probably months
+
+and months later
+
+if the number one language cannot find
+
+jobs how could
+
+lazy learning grass can find it how can
+
+learningrest can
+
+find a job here why would they dream
+
+lost for
+
+for finding jobs it doesn't make any
+
+sense
+
+even you write letting go learning c or
+
+c power plus whatever or even even
+
+learning java will give you my
+
+other jobs why why would learning runs
+
+to give you jobs
+
+and this is a very terrible logic right
+
+basically they're saying that other
+
+languages are all crap
+
+you only rush this bad in the past which
+
+is ridiculous
+
+so of course the final we're going to
+
+talk about is is the project marina
+
+on the project this one microsoft said
+
+it's not designed to replace
+
+rust uh if it is become the same
+
+of course microsoft will on brass
+
+and use the project verona instead
+
+don't say they don't right they won't
+
+it's an experimental phase because they
+
+don't want to be
+
+right no one want to hide their own
+
+purpose but
+
+remember the java is a c-sharp situation
+
+yeah if it's going to happen okay it's
+
+going to happen
+
+all right don't say they won't have it
+
+will happen
+
+all right so it will happen i can
+
+guarantee will happen and it will be
+
+another other language is try to replace
+
+us too because they are saying oh you
+
+have these martial cvs with us we're
+
+going to design something which is even
+
+better
+
+if we don't have a double free on panic
+
+for example we don't have this
+
+this craze whatever this nonsense we
+
+don't have this terrible
+
+a compilation speed i think there are
+
+some types like real language is doing
+
+but we're gonna see i i
+
+rust is definitely not not the end of
+
+the story right it's not
+
+just the end of everything okay it's not
+
+like like rusty
+
+rust is going to be the best language in
+
+history okay
+
+i think we even even even though java
+
+was to claim they are very same
+
+but in fact java java is
+
+played very safe
+
+and safe right but in fact java is
+
+plagued with cvs too
+
+same with us basically these people are
+
+too naive
+
+basically i would argue they are too
+
+naughty they don't read papers they
+
+don't raise these cv numbers don't worry
+
+real world data
+
+like i did right it just showed real
+
+what data i failed to see anyone talking
+
+about these memory safety
+
+issues in rust how they come from so we
+
+have so you save it
+
+they don't even they don't care they
+
+just leave their own echo chambers and
+
+just i think their logics are very
+
+problematic
+
+and if you try to defeat them you know i
+
+think what happens right now is that
+
+nobody is using rust
+
+that happen is that no one is using laws
+
+[Music]
+
+right they have some good ideas they
+
+have some good advertisements and people
+
+say oh
+
+this is great but but no one is actually
+
+using it
+
+right they don't see the problems they
+
+don't see actually what's going on here
+
+and anyone who try to just say all this
+
+language is terrible
+
+a lot of people like me or probably
+
+you're going to love it but for me
+
+a lot of people who really understand
+
+what's going on here we understand
+
+compiler optimizations
+
+we understand every instructions we
+
+understand how compiler generates
+
+code we know it's not as good as the
+
+what the raspbox client is claiming here
+
+uh this video is pretty long probably
+
+it's more about rental rust because the
+
+major problem
+
+is that i feel to see anyone anyone on
+
+the internet just talking about it
+
+talking about these issues with it
+
+talking about the issues with lost the
+
+serious design flaws with rust
+
+and i hope this video will be very
+
+helpful for you
+
+to think about it and
+
+you should ignore people who think all
+
+rust is going to replace everything rust
+
+is going to replace not just clc plus
+
+plus other languages
+
+too and you know we always talk about
+
+clc prosper
+
+right but c and c plus plus are two like
+
+different languages
+
+right if you look at cv numbers c plus
+
+losses
+
+it is actually not the second worst
+
+language in the world right it's
+
+it's probably your python and it's
+
+python
+
+java is more likely to have box than c
+
+password
+
+for example
+
+but uh most people who say oh just
+
+c plus plus destroys everything c plus
+
+one volume of c products
+
+won't save us c problems how bad c
+
+processes so they can promote their
+
+their own
+
+trash so that's dishonest right
+
+um what are you what are you gonna do
+
+with it i think what you can do is
+
+do what are you gonna do shouldn't you
+
+should not listen to these people
+
+without claiming
+
+those things it's just very problematic
+
+and bad okay
+
+okay uh
+
+and don't don't say i don't listen to
+
+these videos like
+
+we watch these videos like ross whatever
+
+okay uh ross programming language
+
+these are all horrible videos right
+
+these as
+
+these they claim they are experts they
+
+just want money you know
+
+these experts are very bad i don't know
+
+how they become the expert here
+
+oh let's talk about zbrust at microsoft
+
+this is my favorite stuff let's just
+
+doing a personal uh 61 personal attack
+
+here okay
+
+this is vlogging
+
+okay you know don't don't say i
+
+i don't watch the video i actually want
+
+all the videos
+
+the horrible that guy claimed he
+
+he trained people cnc passport
+
+okay he did claim the intrinsic
+
+clc but
+
+okay but you see even all his code okay
+he don't write gross code properly what
+he didn't do is
+uh basically clone other people's
+product okay he
+it's basically clone other people he
+knows real
+very serious project what he always do
+is just
+uh fork other people's
+product he himself don't write much
+of the serious ross code okay this is
+another false product
+and he also claimed he trained people
+cnc plus files like microsoft you know
+i but i i i can barely find any c
+product
+i'll probably always see i remember this
+is only one c product
+there's no c plus plus product at all
+you cannot find
+any c plus positive it don't even it
+does not even
+any of c plus c plus plus product
+right there's no c-plus
+project at all but he claiming he's
+training people c plus bars and
+microsoft or whatever nonsense
+so it's very dishonest these people are
+very dishonest right this is people
+uh
+oh
+seriously by the series okay basically
+they basically don't understand how
+things are going on okay
+uh i i think if i might
+i would fire these people i just see cpu
+needs to be fired this is just damning
+our reputation
+so that's it that's all about the video
+and hope you enjoyed
+thank you for watching this video uh let
+me see
+how to stop stop it
+all day
+i'll close the video here
+okay bye
+
