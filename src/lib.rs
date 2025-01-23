@@ -1,3 +1,4 @@
+
 use std::error::Error;
 use std::fs;
 use std::env;
@@ -8,12 +9,20 @@ pub struct Config {
     pub ignore_case: bool,
 }
 impl Config {
-    pub fn build(args: &[String]) -> Result<Config, &'static str> {
-        if args.len() != 3 {
-            panic!("please, enter just 2 arguments, the word you want find and the file path");
-        }
-        let query = args[1].clone();
-        let file_path: String = args[2].clone();
+    pub fn build(mut args: impl Iterator<Item = String>) -> Result<Config, &'static str> {
+        
+        //ignore the first item on the iterator because is the name of the program
+        args.next();
+
+        let query: String = match args.next() {
+            Some(args) => args,
+            None => return Err("didn't get query string")
+        };
+        let file_path: String = match args.next() {
+            Some(args) => args,
+            None => return Err("no file path passed")
+        };
+        
 
         let ignore_case = env::var("NO_IGNORE_CASE").is_ok();
         // This make the enviroment variable persistend along the command line session.
